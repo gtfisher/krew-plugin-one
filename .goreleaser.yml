@@ -1,10 +1,10 @@
-project_name: {{ .PluginName }}
+project_name: krew-plugin-one
 release:
   github:
-    owner: {{ .Owner }}
-    name: {{ .Repo }}
+    owner: gtfisher
+    name: krew-plugin-one
 builds:
-  - id: {{ .PluginName }}
+  - id: krew-plugin-one
     goos:
     - linux
     - windows
@@ -17,12 +17,12 @@ builds:
       - GO111MODULE=on
     main: cmd/plugin/main.go
     ldflags: -s -w
-      -X github.com/{{ .Owner }}/{{ .Repo }}/pkg/version.version=
+      -X github.com/gtfisher/krew-plugin-one/pkg/version.version=
 archives:
-  - id: {{ .PluginName }}
+  - id: krew-plugin-one
     builds:
-    - {{ .PluginName }}
-    name_template: {{ `"{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"` }}
+    - krew-plugin-one
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
     format_overrides:
     - goos: windows
       format: zip

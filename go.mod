@@ -1,4 +1,4 @@
-module github.com/replicatedhq/krew-plugin-template
+module github.com/gtfisher/krew-plugin-one
 
 go 1.12
 
